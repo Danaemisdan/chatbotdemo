@@ -12,11 +12,11 @@ export async function POST(req: Request) {
 
         const openai = createOpenAI({
             baseURL: process.env.OPENAI_BASE_URL || 'https://openrouter.ai/api/v1',
-            apiKey: "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",
+            apiKey: "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",
         });
 
         const result = await streamText({
-            model: openai('stepfun/step-3.5-flash:free') as any,
+            model: openai('sourceful/riverflow-v2-fast') as any,
             messages,
             system: `${ADMISSION_INDIA_CONTEXT}
       
