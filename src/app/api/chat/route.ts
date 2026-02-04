@@ -12,7 +12,7 @@ export async function POST(req: Request) {
 
         const openai = createOpenAI({
             baseURL: process.env.OPENAI_BASE_URL || 'https://openrouter.ai/api/v1',
-            apiKey: process.env.OPENROUTER_API_KEY,
+            apiKey: "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",
         });
 
         const result = await streamText({
