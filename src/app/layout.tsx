@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} antialiased tracking-tight`}
+        className={`${inter.variable} antialiased tracking-tight bg-white text-black`}
       >
         {children}
         <ChatBot />
