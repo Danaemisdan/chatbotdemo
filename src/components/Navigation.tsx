@@ -18,8 +18,7 @@ export default function Navigation() {
                             <img
                                 src="/logo-new.png"
                                 alt="Admission India"
-                                className="h-full w-full object-contain"
-                                style={{ mixBlendMode: 'multiply' }}
+                                className="h-full w-full object-contain logo-blend"
                             />
                         </div>
                     </Link>
