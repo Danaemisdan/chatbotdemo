@@ -25,7 +25,7 @@ export async function POST(req: Request) {
         });
 
         const result = await streamText({
-            model: google('gemini-2.0-flash-lite-001') as any,
+            model: google('gemini-flash-latest') as any,
             messages,
             system: `${ADMISSION_INDIA_CONTEXT}
       
