@@ -1,22 +1,31 @@
-
-import { createOpenAI } from '@ai-sdk/openai';
+import { createGoogleGenerativeAI } from '@ai-sdk/google';
 import { streamText } from 'ai';
-import { ADMISSION_INDIA_CONTEXT } from "@/lib/context";
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
+
+const ADMISSION_INDIA_CONTEXT = `
+You are an intelligent assistant for "Admission India", a premium education consultancy.
+Your goal is to help students with Medical, Engineering, and Management admissions.
+Key Services:
+- Medical: MBBS, BDS, PG Medical (India & Abroad)
+- Engineering: IITs, NITs, Top Private Colleges
+- Management: MBA, PGDM, Executive MBA
+- Study Abroad: USA, UK, Canada, Australia, Europe
+
+Tone: Professional, encouraging, and trustworthy.
+`;
 
 export async function POST(req: Request) {
     try {
         const { messages } = await req.json();
 
-        const openai = createOpenAI({
-            baseURL: process.env.OPENAI_BASE_URL || 'https://openrouter.ai/api/v1',
-            apiKey: "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",
+        const google = createGoogleGenerativeAI({
+            apiKey: "AIzaSyAX4EACo2AWVoWOwrn_7mKCtD6M52vF33Y",
         });
 
         const result = await streamText({
-            model: openai('sourceful/riverflow-v2-fast') as any,
+            model: google('gemini-2.0-flash') as any,
             messages,
             system: `${ADMISSION_INDIA_CONTEXT}
       
