@@ -14,13 +14,9 @@
 html,
 body {
   color-scheme: light;
-}
-
-color: var(--foreground);
-background: var(--background);
-font-family: Arial,
-Helvetica,
-sans-serif;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Force logo blending */
