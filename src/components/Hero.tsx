@@ -23,15 +23,13 @@ export function Hero({
             id="hero"
             className="relative mx-auto w-full pt-40 px-6 text-center md:px-8 
       min-h-[calc(100vh-40px)] overflow-hidden 
-      bg-[linear-gradient(to_bottom,#fff,#ffffff_50%,#e8e8e8_88%)]  
-      dark:bg-[linear-gradient(to_bottom,#000,#0000_30%,#898e8e_78%,#ffffff_99%_50%)] 
+      bg-white
       rounded-b-[3rem]"
         >
             {/* Grid BG */}
             <div
                 className="absolute -z-10 inset-0 opacity-80 h-[600px] w-full 
         bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] 
-        dark:bg-[linear-gradient(to_right,#333_1px,transparent_1px),linear-gradient(to_bottom,#333_1px,transparent_1px)]
         bg-[size:6rem_5rem] 
         [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"
             />
@@ -40,9 +38,8 @@ export function Hero({
             <div
                 className="absolute left-1/2 top-[calc(100%-90px)] lg:top-[calc(100%-150px)] 
         h-[500px] w-[700px] md:h-[500px] md:w-[1100px] lg:h-[750px] lg:w-[140%] 
-        -translate-x-1/2 rounded-[100%] border-[#0071e3] bg-white dark:bg-black 
+        -translate-x-1/2 rounded-[100%] border-[#0071e3] bg-white 
         bg-[radial-gradient(closest-side,#fff_82%,#000000)] 
-        dark:bg-[radial-gradient(closest-side,#000_82%,#ffffff)] 
         opacity-50 blur-3xl animate-in fade-in zoom-in duration-1000"
             />
 
@@ -50,9 +47,9 @@ export function Hero({
             {eyebrow && (
                 <a href="#" className="group relative z-10 block mb-6">
                     <span
-                        className="text-sm text-gray-600 dark:text-gray-400 font-medium mx-auto px-5 py-2 
+                        className="text-sm text-gray-600 font-medium mx-auto px-5 py-2 
             bg-white/80 backdrop-blur-md
-            border border-gray-200 dark:border-white/10 
+            border border-gray-200 
             rounded-full w-fit tracking-tight uppercase flex items-center justify-center shadow-sm hover:shadow-md transition-all"
                     >
                         {eyebrow}
@@ -67,7 +64,7 @@ export function Hero({
         bg-gradient-to-br from-gray-900 via-gray-800 to-gray-600
         bg-clip-text py-6 text-5xl font-bold leading-[0.9] tracking-tighter 
         text-transparent sm:text-7xl md:text-8xl lg:text-9xl 
-        dark:from-white dark:to-white/40 mb-2"
+        mb-2"
             >
                 {title}
             </h1>
@@ -75,7 +72,7 @@ export function Hero({
             {/* Subtitle */}
             <p
                 className="relative z-10 animate-in fade-in slide-in-from-bottom-5 duration-700 delay-150 mb-12 text-balance 
-        text-lg tracking-tight text-gray-500 dark:text-gray-400 
+        text-lg tracking-tight text-gray-500 
         md:text-2xl font-medium max-w-3xl mx-auto"
             >
                 {subtitle}
