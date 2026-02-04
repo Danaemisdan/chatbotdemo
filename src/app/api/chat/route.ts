@@ -15,8 +15,8 @@ export async function POST(req: Request) {
             apiKey: process.env.OPENROUTER_API_KEY,
         });
 
-        const result = streamText({
-            model: openai('stepfun/step-3.5-flash:free'),
+        const result = await streamText({
+            model: openai('stepfun/step-3.5-flash:free') as any,
             messages,
             system: `${ADMISSION_INDIA_CONTEXT}
       
