@@ -1,4 +1,4 @@
-import { createGoogleGenerativeAI } from '@ai-sdk/google';
+import { createOpenAI } from '@ai-sdk/openai';
 import { streamText } from 'ai';
 
 // Allow streaming responses up to 30 seconds
@@ -20,12 +20,13 @@ export async function POST(req: Request) {
     try {
         const { messages } = await req.json();
 
-        const google = createGoogleGenerativeAI({
-            apiKey: "AIzaSyAX4EACo2AWVoWOwrn_7mKCtD6M52vF33Y",
+        const openai = createOpenAI({
+            baseURL: 'https://openrouter.ai/api/v1',
+            apiKey: "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",
         });
 
         const result = await streamText({
-            model: google('gemini-flash-latest') as any,
+            model: openai('stepfun/step-3.5-flash:free') as any,
             messages,
             system: `${ADMISSION_INDIA_CONTEXT}
       
