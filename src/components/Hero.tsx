@@ -21,9 +21,9 @@ export function Hero({
     return (
         <section
             id="hero"
-            className="relative mx-auto w-full pt-40 px-6 text-center md:px-8 
+            className="relative mx-auto w-full pt-32 px-6 text-center md:px-8 
       min-h-[calc(100vh-40px)] overflow-hidden 
-      bg-white
+      bg-gradient-to-b from-white via-blue-50/30 to-white
       rounded-b-[3rem]"
         >
             {/* Grid BG */}
@@ -62,18 +62,18 @@ export function Hero({
             <h1
                 className="relative z-10 animate-in fade-in slide-in-from-bottom-4 duration-700 text-balance 
         bg-gradient-to-br from-gray-900 via-gray-800 to-gray-600
-        bg-clip-text py-6 text-5xl font-bold leading-[0.9] tracking-tighter 
-        text-transparent sm:text-7xl md:text-8xl lg:text-9xl 
-        mb-2"
+        bg-clip-text py-6 text-5xl font-bold leading-tight tracking-tight 
+        text-transparent sm:text-6xl md:text-7xl lg:text-8xl 
+        mb-6"
             >
                 {title}
             </h1>
 
             {/* Subtitle */}
             <p
-                className="relative z-10 animate-in fade-in slide-in-from-bottom-5 duration-700 delay-150 mb-12 text-balance 
-        text-lg tracking-tight text-gray-500 
-        md:text-2xl font-medium max-w-3xl mx-auto"
+                className="relative z-10 animate-in fade-in slide-in-from-bottom-5 duration-700 delay-150 mb-10 text-balance 
+        text-base tracking-normal text-gray-600 
+        md:text-xl font-normal max-w-2xl mx-auto leading-relaxed"
             >
                 {subtitle}
             </p>

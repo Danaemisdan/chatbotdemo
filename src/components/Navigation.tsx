@@ -10,21 +10,19 @@ export default function Navigation() {
 
     return (
         <>
-            <header className="fixed top-0 left-0 right-0 z-40 px-4 pt-16 pb-4 md:px-8">
-                <div className="max-w-7xl mx-auto glass rounded-full px-6 py-3 flex items-center justify-between shadow-sm relative">
+            <header className="fixed top-0 left-0 right-0 z-40 px-4 pt-4 pb-4 md:px-8">
+                <div className="max-w-7xl mx-auto bg-white/80 backdrop-blur-lg rounded-full px-6 py-3 flex items-center justify-between shadow-lg border border-gray-100 relative">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-3 group">
-                        <div className="absolute left-6 -top-16 h-48 w-auto z-50">
-                            <img
-                                src="/logo-new.png"
-                                alt="Admission India"
-                                className="h-full w-full object-contain logo-blend"
-                            />
-                        </div>
+                    <Link href="/" className="flex items-center gap-3 group relative z-50">
+                        <img
+                            src="/logo-new.png"
+                            alt="Admission India"
+                            className="h-12 w-auto object-contain logo-blend"
+                        />
                     </Link>
 
                     {/* Desktop Nav */}
-                    <nav className="hidden md:flex items-center gap-8 font-medium text-sm text-gray-500 ml-40">
+                    <nav className="hidden md:flex items-center gap-8 font-medium text-sm text-gray-600">
                         <Link href="#" className="text-gray-900 hover:text-blue-600 transition-colors">Home</Link>
                         <Link href="#" className="hover:text-gray-900 transition-colors">Services</Link>
                         <Link href="#" className="hover:text-gray-900 transition-colors">Colleges</Link>
