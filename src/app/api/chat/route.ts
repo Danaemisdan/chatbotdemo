@@ -22,11 +22,11 @@ export async function POST(req: Request) {
 
         const openai = createOpenAI({
             baseURL: 'https://openrouter.ai/api/v1',
-            apiKey: "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",
+            apiKey: "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",
         });
 
         const result = await streamText({
-            model: openai('stepfun/step-3.5-flash:free') as any,
+            model: openai('google/gemma-3n-e4b-it:free') as any,
             messages,
             system: `${ADMISSION_INDIA_CONTEXT}
       
